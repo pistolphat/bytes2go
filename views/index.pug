@@ -10,10 +10,12 @@ block layout-content
       span.Details Access the Bytes2Go Team Portal
     div.NavButtons
       if isAuthenticated
+        //- a(href='#')
         a(href='/user')
           div.NavButton Come on in!
       else
-        a(href='/login')
+        //- a(href='/login')
+        a(href='/user')
           div.NavButton Log In
 
 //- Pug templates don't use HTML tags, instead, they simply use the names of HTML 

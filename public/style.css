@@ -93,7 +93,7 @@ a {
   justify-content: center;
   align-items: center;
 
-  width: 85%;
+  width: 100%;
 
   border-radius: 5px;
 
@@ -112,6 +112,7 @@ a {
   padding: 30px;
   border-bottom: var(--ui-shawdow-border);
   box-shadow: var(--ui-shawdow);
+  border-radius: 5px;
 }
 
 .Message > .Title {
@@ -156,5 +157,10 @@ a {
 
 .WelcomeView {
   background: url('foodSamplePic.jpeg') left bottom;
+  background-size: cover;
+}
+
+.UserView {
+  background: url('teamwork.jpeg') left bottom;
   background-size: cover;
 }

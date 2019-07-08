@@ -9,8 +9,9 @@ block layout-content
         h1 Teammate Profile
       pre.Details=JSON.stringify(userProfile, null, 2)
     div.NavButtons
-      a(href='/logout')
-      div.Navbutton Log Out
+      //- a(href='/logout')
+      a(href='/')
+        div.NavButton Log Out
 
 
 //- The local userProfile variable will be provided to this view by the route controller that renders it.

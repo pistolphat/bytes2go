@@ -4,7 +4,8 @@
   "description": "## Simple web application to practice Node.js and Express framework. In addition, there will be a simple User Interface with Authentication practices.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "ui": "browser-sync start --proxy=localhost:3000 --files='**/*.css, **/*.pug, **/*.js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
   }
 }

@@ -1,0 +1,21 @@
+extends layout
+
+block layout-content
+  div.View
+    h1.Banner Bytes2Go
+    div.Message
+      div.Title
+        h3 Supplying only the BEST
+        h1 Bytes for Devs
+      span.Details Access the Bytes2Go Team Portal
+    div.NavButtons
+      if isAuthenticated
+        a(href='/user')
+          div.NavButton Come on in!
+      else
+        a(href='/login')
+          div.NavButton Log In
+
+//- Pug templates don't use HTML tags, instead, they simply use the names of HTML 
+//- elements and whitespace to define the structure of a template.
+//- Classes are defined using a .classname syntax while IDs are defined using a #idname syntax.

@@ -4,9 +4,14 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || '3000';
 
-// Simple GET Http Request to root path, replies with a string
+// App.set(name, value) method assigns name to a value
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+// Simple GET Http Request to root path, method render() index page (filepath) template as client response.
+// Method render() optional argument, Object to define the {title} variable within Index.pug template.
 app.get('/', (req, res) => {
-  res.status(200).send('Bytes2Go Ready');
+  res.render('index', { title: 'Home' });
 });
 
 // Setup to listen on specify port
